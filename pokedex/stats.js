@@ -6,24 +6,24 @@ export const getStats = async (pokemon) => {
        throw new Error('cannot fetch stats') 
      }
      const data = await response.json()
-     // console.log(data)
+    console.log(data)
      const section = document.getElementById('stats')
      const ul = document.createElement('ul')
-     const height = document.createElement('p')
+     const height = document.createElement('li')
      const weight = document.createElement('li')
      const type = document.createElement('li')
      const species = document.createElement('li')
      const ability = document.createElement('li')
      const moves = document.createElement('li')
  // add value 
-     height.textContent = data.height
-     weight.textContent = data.height
-     type.textContent = data.height
-     species.textContent = data.height
-     ability.textContent = data.height
-     moves.textContent = data.height
+     height.textContent = `Height: ${data.height}`
+     weight.textContent = `Weight: ${data.weight}`
+     type.textContent = `Type: ${data.types[0].type.name}`
+     species.textContent = `Species: ${data.species.name}`
+     ability.textContent = `Ability: ${data.abilities[0].ability.name}`
+     moves.textContent = `Moves: ${data.moves[0].move.name}`
      // append 
-     section.append(height)
+     section.append(height,type, weight, species, ability,moves )
    }
    catch(error){
      console.warn(error.message)
