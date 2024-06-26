@@ -5,6 +5,7 @@ const handleSubmission = (e) => {
 	e.preventDefault();
 	const input = document.getElementById(`poke-search`)
 	fetchPokemon(input.value);
+  e.target.reset()
 };
 
 const main = () => {

@@ -102,13 +102,6 @@ button:focus-visible {
   }
 }
 
-.image {
-  display: flex;
-  align-self: center;
-  width: 105%;
-  height: 105%;
-}
-
 
 h1 {
   text-align: center;
@@ -118,10 +111,13 @@ h1 {
 }
 
 
-
 body {
   text-align: center;
   display: inline-block;
   display: flex;
   justify-content: center;
+}
+
+ul {
+  list-style-type: none;
 }
