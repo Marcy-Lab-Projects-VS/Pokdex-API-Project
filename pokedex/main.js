@@ -1,18 +1,19 @@
+
 import { getStats } from './stats'
+import { fetchPokemon } from "./pokemon";
+const handleSubmission = (e) => {
+	e.preventDefault();
+	const input = document.getElementById(`poke-search`)
+	fetchPokemon(input.value);
+  getStats(input.value)
+  e.target.reset()
+};
 
-const submitForm = (e)=>{
-  const input = document.getElementById('poke-search')
- e.preventDefault() 
- getStats(input.value)
- console.log('success!')
-}
+const main = () => {
+	const searchForm = document.getElementById('pokemon-sub');
+	searchForm.addEventListener('submit', handleSubmission);
+};
 
 
-const main = () =>{
-   const form = document.getElementById('pokemon-sub')
- form.addEventListener('submit',submitForm )
-
-}
-
-main()
+main();
 
