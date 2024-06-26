@@ -1,11 +1,11 @@
 
-
-
+import { getStats } from './stats'
 import { fetchPokemon } from "./pokemon";
 const handleSubmission = (e) => {
 	e.preventDefault();
 	const input = document.getElementById(`poke-search`)
 	fetchPokemon(input.value);
+  getStats(input.value)
   e.target.reset()
 };
 
@@ -16,3 +16,4 @@ const main = () => {
 
 
 main();
+
