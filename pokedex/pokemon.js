@@ -1,17 +1,14 @@
 
 export const fetchPokemon = async (value) => {
 	try {
-    
     const pokemonStats = document.getElementById('stats');
     pokemonStats.innerHTML = '';
-
-
     const section = document.getElementById('pokemon-picture');
     section.innerHTML = '';
 		const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}/`);
 		if (!res.ok) {
       const errorText = document.createElement('p')
-      errorText.textContent = `Can you spell`
+      errorText.textContent = `No pokemon found under that name. Check spelling and try again!`
       section.append(errorText)
 			throw new Error('Check the URL!');
 		}
@@ -22,6 +19,10 @@ export const fetchPokemon = async (value) => {
 		const pokeID =  document.createElement('li')
 		const pokemonList = document.createElement('ul')
 		pokemonList.append(pokemonName,sprites,pokeID)
+
+  
+
+//hp,attack,defense,special,sp defense
 		
 
 //enabling first index character to be uppercase
@@ -38,3 +39,8 @@ export const fetchPokemon = async (value) => {
 		console.log(new Error(err));
 	}
 };
+
+
+//
+
+const matches = document.querySelectorAll("p");
