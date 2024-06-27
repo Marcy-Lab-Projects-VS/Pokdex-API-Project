@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* background-image: url('grass.jpg') */
 }
 
 h1 {
@@ -81,6 +82,7 @@ button {
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -107,6 +109,18 @@ h1 {
   display: inline-block;
   display: flex;
   justify-content: center;
+  background-clip: border-box;
+
+
+  color: red;
+  color: white;
+  text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
+
+
 }
 
 
@@ -115,8 +129,63 @@ body {
   display: inline-block;
   display: flex;
   justify-content: center;
+
+
+  color: white;
+  font-size: 20px;
+  text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
 }
 
 ul {
   list-style-type: none;
+  /* float: left; */
+  display: flex;
+  margin-right: 25px;
+}
+
+#stats {
+  list-style-type: none;
+  margin-left: 20px;
+
+  color: white;
+  font-size: 18px;
+  text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
+
+
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  margin-left: 20px;
+  background-color: #34ebbd;
+  /* Green */
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+body,
+html {
+  height: 100%;
+  background-image: url("grass.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
