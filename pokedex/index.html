@@ -1,23 +1,39 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="Pokeball-1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokedex</title>
 </head>
+<style>
+  * {
+    font-weight: bold;
+  }
+</style>
 
 <body>
   <main>
-    <h1>Pokedex</h1>
+    <h1>
+      <span style="color:white">P</span>
+      <span style="color:red">o</span>
+      <span style="color:white">k</span>
+      <span style="color:red">e</span>
+      <span style="color:white">d</span>
+      <span style="color:red">e</span>
+      <span style="color:white">x</span>
+    </h1>
     <form action="" id="pokemon-sub">
-      <label for="poke-search">Pokemon Search:</label>
+      <label for="poke-search"></label>
       <input type="text" id="poke-search" placeholder="Search for a Monster" name="pokeSearch">
       <button type="submit" id="search-pokemon">GO!</button>
     </form>
     <section id='pokemon-picture' aria-labelledby="pokemon-display">
     </section>
+    <section class="container">
     <button id="statsbutton" style="display: none;">Click me for stats! </button>
+    </section>
     <section aria-labelledby="pokemon stats" id="stats">
     </section>
   </main>
@@ -28,4 +44,3 @@
 </body>
 
 </html>
-
