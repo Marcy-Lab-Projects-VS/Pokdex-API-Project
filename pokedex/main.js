@@ -11,26 +11,24 @@ const handleSubmission = (e) => {
   const pokemonStats = document.getElementById('stats');
   pokemonStats.innerHTML = ''
   // console.log(showButton)
+  showButton.addEventListener('click', () => { 
+    pokemonStats.innerHTML = '';
+      getStats(pokemon) })
+      
   if (input.value.trim() === ''){
     showButton.style.display = 'none'
     pokemonStats.innerHTML = ''
   } else{
   showButton.style.display = 'block'
-
 }
   
-  showButton.addEventListener('click', () => { 
-    pokemonStats.innerHTML = '';
-     getStats(pokemon) })
-    e.target.reset()
-
+  e.target.reset()
 };
 
 const main = () => {
   const pokemonStats = document.getElementById('stats');
   pokemonStats.innerHTML = '';
   const searchForm = document.getElementById('pokemon-sub');
-
    searchForm.addEventListener('submit', handleSubmission);
 
 
