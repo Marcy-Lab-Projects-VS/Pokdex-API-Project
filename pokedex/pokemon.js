@@ -43,4 +43,3 @@ export const fetchPokemon = async (value) => {
 
 //
 
-const matches = document.querySelectorAll("p");
