@@ -17,10 +17,11 @@ const handleSubmission = (e) => {
   } else{
   showButton.style.display = 'block'
 }
+  
   showButton.addEventListener('click', () => { 
-  pokemonStats.innerHTML = '';
-    getStats(pokemon) })
-  e.target.reset()
+    pokemonStats.innerHTML = '';
+     getStats(pokemon) })
+    e.target.reset()
 };
 
 const main = () => {
@@ -30,6 +31,10 @@ const main = () => {
    searchForm.addEventListener('submit', handleSubmission);
 
 
+
+ 
+
+  }); 
   // const showButton = document.getElementById('statsbutton')
   // showButton.addEventListener('click', getStats)
 

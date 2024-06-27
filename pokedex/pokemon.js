@@ -8,6 +8,7 @@ export const fetchPokemon = async (value) => {
       const errorText = document.createElement('p')
       errorText.textContent = `No pokemon found under that name. Check spelling and try again!`
       section.append(errorText)
+
       throw new Error('Check the URL!');
     }
     const data = await res.json();
@@ -17,6 +18,8 @@ export const fetchPokemon = async (value) => {
     const pokeID =  document.createElement('li')
     const pokemonList = document.createElement('ul')
     pokemonList.append(pokemonName,sprites,pokeID)
+
+			
     pokemonName.textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);;
     sprites.src = data.sprites.front_default;
     pokeID.textContent = `ID: ${data.id}`
