@@ -16,10 +16,14 @@ export const getStats = async (pokemon) => {
      const species = document.createElement('li')
      const ability = document.createElement('li')
      const hp = document.createElement('li')
- // add value 
+     
      height.textContent = `Height: ${data.height}`
      weight.textContent = `Weight: ${data.weight}`
-     type.textContent = `Type: ${data.types[0].type.name}`
+     type.textContent = `Type: ${data.types[0].type.name}`;
+     if (data.types[1]) {
+         type.textContent += ` / ${data.types[1].type.name}`;
+     }
+     
      species.textContent = `Species: ${data.species.name}`
      ability.textContent = `Ability: ${data.abilities[0].ability.name}`
      hp.textContent = `HP: ${data.stats[0].base_stat}`

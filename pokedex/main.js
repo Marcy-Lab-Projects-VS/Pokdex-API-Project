@@ -16,18 +16,21 @@ const handleSubmission = (e) => {
     pokemonStats.innerHTML = ''
   } else{
   showButton.style.display = 'block'
+
 }
   
   showButton.addEventListener('click', () => { 
     pokemonStats.innerHTML = '';
      getStats(pokemon) })
     e.target.reset()
+
 };
 
 const main = () => {
   const pokemonStats = document.getElementById('stats');
   pokemonStats.innerHTML = '';
   const searchForm = document.getElementById('pokemon-sub');
+
    searchForm.addEventListener('submit', handleSubmission);
 
 
@@ -38,3 +41,6 @@ const main = () => {
 
 
 main();
+
+
+
