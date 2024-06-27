@@ -10,13 +10,23 @@ const handleSubmission = (e) => {
   const showButton = document.getElementById('statsbutton');
   // console.log(showButton)
   showButton.style.display = 'block'
-  showButton.addEventListener('click', () => { getStats(pokemon) })
+  showButton.addEventListener('click', () => { 
+    const pokemonStats = document.getElementById('stats');
+    pokemonStats.innerHTML = '';
+    getStats(pokemon) })
   e.target.reset()
 };
 
 const main = () => {
+  const pokemonStats = document.getElementById('stats');
+  pokemonStats.innerHTML = '';
   const searchForm = document.getElementById('pokemon-sub');
-  searchForm.addEventListener('submit', handleSubmission);
+  searchForm.addEventListener('submit', handleSubmission); 
+  searchForm.addEventListener('submit', () => {
+    const pokemonStats = document.getElementById('stats');
+    pokemonStats.innerHTML = '';
+
+  }); 
   // const showButton = document.getElementById('statsbutton')
   // showButton.addEventListener('click', getStats)
 

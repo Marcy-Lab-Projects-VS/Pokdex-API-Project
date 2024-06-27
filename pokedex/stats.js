@@ -25,6 +25,7 @@ export const getStats = async (pokemon) => {
      hp.textContent = `HP: ${data.stats[0].base_stat}`
 
      // append 
+     section.innerHTML = '';
      section.append(height,type, weight, species, ability,hp )
    }
    catch(error){

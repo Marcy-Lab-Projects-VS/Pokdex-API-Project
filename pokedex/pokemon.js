@@ -1,8 +1,6 @@
 
 export const fetchPokemon = async (value) => {
   try {
-    const pokemonStats = document.getElementById('stats');
-    pokemonStats.innerHTML = '';
     const section = document.getElementById('pokemon-picture');
     section.innerHTML = '';
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}/`);
