@@ -31,10 +31,6 @@ const main = () => {
    searchForm.addEventListener('submit', handleSubmission);
 
 
-
- 
-
-  }); 
   // const showButton = document.getElementById('statsbutton')
   // showButton.addEventListener('click', getStats)
 
