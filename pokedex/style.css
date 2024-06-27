@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -149,31 +154,46 @@ ul {
 
 #stats {
   list-style-type: none;
-  margin-left: 20px;
+  margin-left: 0%;
 
   color: white;
   font-size: 18px;
+
   text-shadow:
     0.07em 0 black,
     0 0.07em black,
     -0.07em 0 black,
     0 -0.07em black;
-
-
 }
 
 img {
   width: 300px;
   height: 300px;
+  /* margin-right: 0%; */
+
 }
 
 button {
-  margin-left: 20px;
+  margin-left: 0%;
   background-color: #34ebbd;
   /* Green */
   border: none;
   color: white;
   font-size: 16px;
+}
+
+#statsbutton {
+  margin-left: 32%;
+  background-color: #34ebbd;
+  /* Green */
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+#search-pokemon {
+  margin-left: 5%;
+
 }
 
 body,
