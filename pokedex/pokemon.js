@@ -2,6 +2,10 @@
 
 export const fetchPokemon = async (value) => {
   try {
+     const dataStats = document.getElementById('data-stats');
+    if(dataStats && dataStats.innerHTML !== ""){
+      dataStats.innerHTML = ""
+    }
     const section = document.getElementById('pokemon-picture');
     section.innerHTML = '';
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}/`);
@@ -21,6 +25,7 @@ export const fetchPokemon = async (value) => {
     pokemonName.textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);;
     sprites.src = data.sprites.front_default;
     pokeID.textContent = `ID: ${data.id}`
+    section.dataset.name = pokemonName.textContent.toLowerCase();
     section.append(pokemonList)
   } catch (err) {
     console.log(new Error(err));
