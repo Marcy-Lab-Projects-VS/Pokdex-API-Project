@@ -30,7 +30,7 @@ export const getStats = async (e) => {
      const special = document.createElement('li')
      const spDefense = document.createElement('li')
 
- // add value 
+ //dataValues
      height.textContent = `Height: ${data.height}`
      weight.textContent = `Weight: ${data.weight}`
      type.textContent = `Type: ${data.types[0].type.name}`
