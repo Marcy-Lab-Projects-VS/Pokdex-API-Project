@@ -165,8 +165,8 @@ ul2 {
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
   /* margin-right: 0%; */
 
 }
@@ -175,7 +175,6 @@ img {
   display: inline-flex;
   flex-direction: column;
   color: white;
-  font-size: 18px;
   text-shadow:
     0.07em 0 black,
     0 0.07em black,
@@ -214,7 +213,7 @@ html {
 
   /* Full height */
   height: 100%;
-  font-size: 18.9px;
+  font-size: 19px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -233,6 +232,12 @@ html {
 #mid {
   gap: 1rem;
   margin-right: 3%;
+  font-size: 23px;
+  text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
 }
 
 #data3-stats {
