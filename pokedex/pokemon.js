@@ -13,6 +13,7 @@ export const fetchPokemon = async (value) => {
 
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}/`);
     if (!res.ok) {
+
       const errorText = document.createElement('p');
       errorText.textContent = `No pokemon found under that name. Check spelling and try again!`;
       section.append(errorText);

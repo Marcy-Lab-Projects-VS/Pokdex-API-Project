@@ -25,6 +25,7 @@ export const getStats = async (e) => {
      const ability = document.createElement('li')
 
      const hp = document.createElement('li')
+
      const attack = document.createElement('li')
      const defense = document.createElement('li')
      const special = document.createElement('li')
@@ -37,6 +38,7 @@ export const getStats = async (e) => {
       if (data.types[1]) {
          type.textContent += ` / ${data.types[1].type.name}`;
      }
+
      species.textContent = `Species: ${data.species.name}`
      ability.textContent = `Ability: ${data.abilities[0].ability.name}`
 

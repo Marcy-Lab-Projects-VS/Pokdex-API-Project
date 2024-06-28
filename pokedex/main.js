@@ -3,6 +3,7 @@ import { fetchPokemon } from "./pokemon";
 
 const handleSubmission = (e) => {
   e.preventDefault();
+
   let input = document.getElementById('poke-search').value.toLowerCase()
   // const pokemon = input.value.toLowerCase()
   fetchPokemon(input);
@@ -26,15 +27,18 @@ const handleSubmission = (e) => {
   showButton.style.display = 'block'
   }
   input = ""
+
   e.target.reset()
 };
 
 const main = () => {
+
   
   // const pokemonStats = document.getElementById('stats');
   // pokemonStats.innerHTML = '';
   const searchForm = document.getElementById('pokemon-sub');
    searchForm.addEventListener('submit', handleSubmission);
+
 
 
 
