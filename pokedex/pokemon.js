@@ -4,7 +4,10 @@ export const fetchPokemon = async (value) => {
     if (dataStats && dataStats.innerHTML !== "") {
       dataStats.innerHTML = "";
     }
-
+    const ul2 = document.getElementById('data2-stats');
+    if (ul2 && ul2.innerHTML !== "") {
+      ul2.innerHTML = "";
+    }
     const section = document.getElementById('pokemon-picture');
     section.innerHTML = '';
 
@@ -27,10 +30,12 @@ export const fetchPokemon = async (value) => {
     const backShinySprite = document.createElement('img');
 
     const pokeID = document.createElement('li');
+    const pokemonList2 = document.createElement('ul');
     const pokemonList = document.createElement('ul');
-
-    pokemonList.append(pokemonName, defaultSprite,backDefaultSprite, shinySprite,backShinySprite, pokeID);
-
+    pokemonList2.id = 'mid'
+    pokemonList2.append(pokemonName,pokeID)
+    pokemonList.append(defaultSprite,backDefaultSprite, shinySprite,backShinySprite);
+    
     pokemonName.textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);
     backDefaultSprite.src = data.sprites.back_default;
     defaultSprite.src = data.sprites.front_default;
@@ -41,6 +46,7 @@ export const fetchPokemon = async (value) => {
 
     section.dataset.name = pokemonName.textContent.toLowerCase();
     section.append(pokemonList);
+    section.append(pokemonList2);
 
    
 
