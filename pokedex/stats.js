@@ -20,6 +20,12 @@ export const getStats = async (e) => {
      const species = document.createElement('li')
      const ability = document.createElement('li')
      const hp = document.createElement('li')
+
+     const attack = document.createElement('li')
+     const defense = document.createElement('li')
+     const special = document.createElement('li')
+     const spDefense = document.createElement('li')
+
  // add value 
      height.textContent = `Height: ${data.height}`
      weight.textContent = `Weight: ${data.weight}`
@@ -28,11 +34,17 @@ export const getStats = async (e) => {
      ability.textContent = `Ability: ${data.abilities[0].ability.name}`
      hp.textContent = `HP: ${data.stats[0].base_stat}`
 
+     attack.textContent = `Attack: ${data.stats[1].base_stat}`
+     defense.textContent = `Defense: ${data.stats[2].base_stat}`
+     special.textContent = `Special: ${data.stats[3].base_stat}`
+     spDefense.textContent = `Special Defense: ${data.stats[4].base_stat}`
+
+
      // append 
      ul.setAttribute('id', 'data-stats')
      section.innerHTML = '';
      section.textContent = "";
-     ul.append(height,type, weight, species, ability,hp )
+     ul.append(height,type, weight, species, ability,hp,attack,defense,special,spDefense)
      section.append(ul);
     //  section.innerHTML = '';
     //  section.textContent = "";

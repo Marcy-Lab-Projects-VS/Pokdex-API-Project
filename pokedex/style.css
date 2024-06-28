@@ -150,27 +150,33 @@ ul {
   /* float: left; */
   display: flex;
   margin-right: 25px;
+  text-align: center;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+
+
+
 }
 
-#stats {
-  list-style-type: none;
-  margin-left: 0%;
-
-  color: white;
-  font-size: 18px;
-
-  text-shadow:
-    0.07em 0 black,
-    0 0.07em black,
-    -0.07em 0 black,
-    0 -0.07em black;
-}
 
 img {
   width: 300px;
   height: 300px;
   /* margin-right: 0%; */
 
+}
+
+#data-stats {
+  display: inline-flex;
+  flex-direction: column;
+  color: white;
+  font-size: 18px;
+  text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
 }
 
 button {
@@ -209,3 +215,11 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/* img:hover {
+
+   background-color: yellow; 
+
+}
+ */
