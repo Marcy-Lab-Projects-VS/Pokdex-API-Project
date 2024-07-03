@@ -1,5 +1,5 @@
-import { getStats } from './stats'
-import { fetchPokemon } from "./pokemon";
+import { getStats } from './stats.js'
+import { fetchPokemon } from "./pokemon.js";
 
 const handleSubmission = (e) => {
   e.preventDefault();
